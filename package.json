@@ -1,0 +1,23 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "advanced css and sass",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss resources/css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ascyrax/Natours.git"
+  },
+  "author": "ascyrax",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ascyrax/Natours/issues"
+  },
+  "homepage": "https://github.com/ascyrax/Natours#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
