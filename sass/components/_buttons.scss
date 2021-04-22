@@ -1,0 +1,81 @@
+.btn {
+        display: inline-block;
+        text-decoration: none;
+        padding: 1.5rem 3rem;
+        border-radius: 10rem;
+        -webkit-border-radius: 10rem;
+        -moz-border-radius: 10rem;
+        -ms-border-radius: 10rem;
+        -o-border-radius: 10rem;
+        border: 1px solid transparent;
+        /*backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+          */
+        position: relative;
+  
+        &:link,
+        &:visited {
+          opacity: 1;
+        }
+        /* .nav-sec &:hover{
+      opacity: 0;    specificity=(0,0,2,0)
+    }  */
+        &:hover {
+          opacity: 1;
+          /* specificity=(0,0,2,0) */
+          transform: translateY(-0.5rem);
+          -webkit-transform: translateY(-0.5rem);
+          -moz-transform: translateY(-0.5rem);
+          -ms-transform: translateY(-0.5rem);
+          -o-transform: translateY(-0.5rem);
+          box-shadow: 0 10px 10px $black;
+        }
+        &:active {
+          transform: translateY(-0.2rem);
+          -webkit-transform: translateY(-0.2rem);
+          -moz-transform: translateY(-0.2rem);
+          -ms-transform: translateY(-0.2rem);
+          -o-transform: translateY(-0.2rem);
+          box-shadow: 0rem 0.5rem 1rem $light-green;
+        }
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          background-color: green;
+          border-radius: 10rem;
+          -webkit-border-radius: 10rem;
+          -moz-border-radius: 10rem;
+          -ms-border-radius: 10rem;
+          -o-border-radius: 10rem;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          z-index: -1;
+          transition: all 0.4s;
+        }
+  
+        &:hover::after {
+          transform: scaleX(1.4) scaleY(1.6);
+          -webkit-transform: scaleX(1.4) scaleY(1.6);
+          -moz-transform: scaleX(1.4) scaleY(1.6);
+          -ms-transform: scaleX(1.4) scaleY(1.6);
+          -o-transform: scaleX(1.4) scaleY(1.6);
+          opacity: 0;
+        }
+      }
+      .btn--white {
+        background-color: $white;
+        color: $grey-dark;
+        &::after {
+          content: "";
+          display: inline-block;
+          background-color: $white;
+        }
+      }
+      .btn--slideTop {
+        animation: slideTop 1s ease-out 0.94s;
+        -webkit-animation: slideTop 1s ease-out 0.94s;
+        animation-fill-mode: backwards;
+      }
