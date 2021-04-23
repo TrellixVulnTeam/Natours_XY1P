@@ -84,6 +84,44 @@ body {
   color: #eee;
   padding: 3rem; }
 
+h2 {
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 900;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s; }
+
+h3 {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 600; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-skew-dance:hover {
+  transform: skewX(3deg) skewY(4deg) scale(1.1);
+  -webkit-transform: skewX(3deg) skewY(4deg) scale(1.1);
+  -moz-transform: skewX(3deg) skewY(4deg) scale(1.1);
+  -ms-transform: skewX(3deg) skewY(4deg) scale(1.1);
+  -o-transform: skewX(3deg) skewY(4deg) scale(1.1);
+  text-shadow: 0.1rem 1rem 1rem rgba(134, 134, 134, 0.4); }
+
+.u-colorful-text {
+  background-image: linear-gradient(to right, #3cacc0, #b61616);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-color: transparent; }
+
+.u-margin-bottom {
+  margin-bottom: 8rem; }
+
 .btn {
   display: inline-block;
   text-decoration: none;
@@ -156,7 +194,47 @@ body {
   -webkit-animation: slideTop 1s ease-out 0.94s;
   animation-fill-mode: backwards; }
 
+.nav__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+  /* background-color: red; */ }
+  .nav__logo-box--white {
+    height: 4rem;
+    /* width:40px; */
+    display: inline-block;
+    /* background-color: black; */ }
+
+.row {
+  max-width: 114rem;
+  color: green;
+  margin: 0 auto; }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table; }
+  .row [class*="col-"] {
+    float: left; }
+    .row [class*="col-"]:not(:last-child) {
+      margin-right: 5rem;
+      margin-bottom: 5rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 5rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 5rem) / 3); }
+  .row .col-1-of-4 {
+    width: calc((100 % - 3 * 5rem) / 4); }
+  .row .col-2-of-3 {
+    width: calc(5rem + 2 * (100% - 2 *5rem) / 3); }
+  .row .col-2-of-4 {
+    width: calc(2 * (100 % - 3 * 5rem) / 4+5rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * (100% - 3 * 5rem) / 4 + 2 * 5rem); }
+
 /* ------------------------navigation-------------- */
+.nav p {
+  margin-bottom: 10rem; }
+
 .nav {
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.4), rgba(40, 180, 133, 0.8)), url("../img/nature.jpg");
   height: 95vh;
@@ -165,16 +243,6 @@ body {
   clip-path: polygon(0 0, 100% 0%, 100% 74vh, 0% 100%);
   position: relative;
   /* for children's position:absolute */ }
-  .nav__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-    /* background-color: red; */ }
-    .nav__logo-box--white {
-      height: 4rem;
-      /* width:40px; */
-      display: inline-block;
-      /* background-color: black; */ }
   .nav__motto-box {
     /*background-color: red;
             */
@@ -185,35 +253,34 @@ body {
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    /*backface-visibility: hidden;
-            */
-    /*-webkit-backface-visibility: hidden;
-            */
-    text-align: center; }
-    .nav__motto-box p {
-      margin-bottom: 10rem; }
-      .nav__motto-box p span:first-child {
-        font-size: 7rem;
-        text-transform: uppercase;
-        letter-spacing: 2rem;
-        /* background-color: red; */
-        animation-name: slideRight;
-        animation-duration: 1s;
-        /* animation-delay:0.75s; */
-        animation-iteration-count: 1;
-        display: inline-block;
-        /* animation-fill-mode:backwards;  */ }
-      .nav__motto-box p span:last-child {
-        font-size: 2.5rem;
-        text-transform: uppercase;
-        letter-spacing: 1rem;
-        /* background-color: green; */
-        word-spacing: 1.2rem;
-        padding-left: 1rem;
-        animation-name: slideLeft;
-        animation-duration: 1s;
-        /* animation-delay:0.75s; */
-        animation-iteration-count: 1;
-        display: inline-block;
-        /* animation-fill-mode: backwards; */ }
+    -o-transform: translate(-50%, -50%); }
+    .nav__motto-box p span:first-child {
+      font-size: 7rem;
+      text-transform: uppercase;
+      letter-spacing: 2rem;
+      /* background-color: red; */
+      animation-name: slideRight;
+      animation-duration: 1s;
+      /* animation-delay:0.75s; */
+      animation-iteration-count: 1;
+      display: inline-block;
+      /* animation-fill-mode:backwards;  */ }
+    .nav__motto-box p span:last-child {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1rem;
+      /* background-color: green; */
+      word-spacing: 1.2rem;
+      padding-left: 1rem;
+      animation-name: slideLeft;
+      animation-duration: 1s;
+      /* animation-delay:0.75s; */
+      animation-iteration-count: 1;
+      display: inline-block;
+      /* animation-fill-mode: backwards; */ }
+
+.sec-about {
+  background-color: #f7f7f7;
+  height: 125vh;
+  margin-top: -21vh;
+  padding-top: 35vh; }

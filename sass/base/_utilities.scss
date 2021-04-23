@@ -1,0 +1,21 @@
+.u-center-text {
+  text-align: center;
+}
+.u-skew-dance:hover {
+  transform: skewX(3deg) skewY(4deg) scale(1.1);
+  -webkit-transform: skewX(3deg) skewY(4deg) scale(1.1);
+  -moz-transform: skewX(3deg) skewY(4deg) scale(1.1);
+  -ms-transform: skewX(3deg) skewY(4deg) scale(1.1);
+  -o-transform: skewX(3deg) skewY(4deg) scale(1.1);
+  text-shadow: 0.1rem 1rem 1rem rgba($grey-dark, 0.4);
+}
+.u-colorful-text {
+  background-image: linear-gradient(to right, $lightblue-1, $red-1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-color: transparent;
+}
+.u-margin-bottom{
+  margin-bottom:8rem;
+}
