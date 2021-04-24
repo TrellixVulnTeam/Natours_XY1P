@@ -1,0 +1,47 @@
+.right {
+  // @include clearfix;
+  background-color: red;
+  position: relative;
+  &__img {
+    display: inline-block;
+    width: 60%;
+    height: auto;
+    position: absolute;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    z-index: 10;
+    &--1 {
+      top: -2rem;
+      left: 0;
+    }
+    &--2 {
+      top: 5.5rem;
+      left: 25rem;
+    }
+    &--3 {
+      top: 13rem;
+      left: 6rem;
+    }
+    &:hover {
+      z-index: 20;
+      transform: scale(1.2) translateY(-2rem);
+      -webkit-transform: scale(1.2) translateY(-2rem);
+      -moz-transform: scale(1.2) translateY(-2rem);
+      -ms-transform: scale(1.2) translateY(-2rem);
+      -o-transform: scale(1.2) translateY(-2rem);
+      outline: 5px solid $dark-green;
+      outline-offset: 1rem;
+}
+  }
+  //leaving the hovered right__img
+  &:hover &__img:not(:hover) {
+    transform: scale(0.9) ;
+    -webkit-transform: scale(0.9) ;
+    -moz-transform: scale(0.9) ;
+    -ms-transform: scale(0.9) ;
+    -o-transform: scale(0.9) ;
+}
+}

@@ -15,8 +15,6 @@
   clip-path: polygon(0 0, 100% 0%, 100% 74vh, 0% 100%);
   position: relative; /* for children's position:absolute */
 
-
-
   &__motto-box {
     /*background-color: red;
             */
@@ -28,33 +26,6 @@
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
-
-    & p span:first-child {
-      font-size: 7rem;
-      text-transform: uppercase;
-      letter-spacing: 2rem;
-      /* background-color: red; */
-      animation-name: slideRight;
-      animation-duration: 1s;
-      /* animation-delay:0.75s; */
-      animation-iteration-count: 1;
-      display: inline-block;
-      /* animation-fill-mode:backwards;  */
-    }
-    & p span:last-child {
-      font-size: 2.5rem;
-      text-transform: uppercase;
-      letter-spacing: 1rem;
-      /* background-color: green; */
-      word-spacing: 1.2rem;
-      padding-left: 1rem;
-      animation-name: slideLeft;
-      animation-duration: 1s;
-      /* animation-delay:0.75s; */
-      animation-iteration-count: 1;
-      display: inline-block;
-      /* animation-fill-mode: backwards; */
-    }
   }
 }
 .sec-about {
@@ -64,3 +35,24 @@
   padding-top: 35vh;
   // clip-path: polygon(0 21vh, 100% 0, 100% 74%, 0 100%);
 }
+
+.sec-features {
+  @include clearfix;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($light-green, 0.4),
+      rgba($dark-green, 0.8)
+    ),
+    url("../../resources/img/nat-4.jpg");
+  height: 125vh;
+  background-size: cover;
+  background-position: center;
+  transform: skewY(-7deg);
+  -webkit-transform: skewY(-7deg);
+  -moz-transform: skewY(-7deg);
+  -ms-transform: skewY(-7deg);
+  -o-transform: skewY(-7deg);
+  position: relative;
+  margin-top: -12rem;
+}
+
